@@ -1,0 +1,4 @@
+bench_id,side,adopter_name,adopter_email,plaque_text,anonymous,start_date,term_years
+VCP-1001,A,Ada Lovelace,ada@example.com,"In loving memory of
+Ada Lovelace",no,2024-05-01,10
+VCP-1001,B,Grace Hopper,grace@example.com,For Grace,yes,9/15/2025,5

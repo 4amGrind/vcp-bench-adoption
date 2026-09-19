@@ -1,0 +1,3 @@
+bench_id,name,description,area,style,length_ft,latitude,longitude,image_url
+VCP-1001,Lakeside bench 1,Faces the water,Van Cortlandt Lake,worlds_fair,8,40.8935,-73.8955,
+VCP-1002,Parade Ground bench 1,Near the north field,Parade Ground,concrete_base,4,40.9008,-73.8912,https://example.org/photos/vcp-1002.jpg
