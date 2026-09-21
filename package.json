@@ -7,7 +7,8 @@
     "build": "next build",
     "start": "next start",
     "test": "tsx --test tests/*.test.ts",
-    "osm:csv": "node scripts/osm-to-csv.mjs"
+    "osm:csv": "node scripts/osm-to-csv.mjs",
+    "sample:adoptions": "tsx scripts/sample-adoptions.ts"
   },
   "dependencies": {
     "leaflet": "^1.9.4",

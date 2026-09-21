@@ -1,5 +1,7 @@
 # Van Cortlandt Park Bench Adoption
 
+![CI](https://github.com/4amGrind/vcp-bench-adoption/actions/workflows/ci.yml/badge.svg)
+
 A web app for the Van Cortlandt Park bench program. Visitors can:
 
 - see every bench on a map and in a list,
@@ -100,7 +102,17 @@ Volunteers have mapped many of the park's benches on OpenStreetMap. To download 
 npm run osm:csv
 ```
 
-This writes `benches-osm.csv`, which you can import on the admin page. It needs an internet connection and is a starting point, since OpenStreetMap does not know each bench's length or style.
+This writes `benches-osm.csv`, which you can import on the admin page. It needs an internet connection and is a starting point, since OpenStreetMap does not know each bench's length or style. Every imported bench says so in its description.
+
+Freshly imported benches have no adoptions, so the whole map is green. To see every status color, make sample adoptions for them:
+
+```bash
+npm run sample:adoptions
+```
+
+This writes `adoptions-sample.csv`. Import it on the admin page after the benches. The names, plaque text and dates in it are made up.
+
+Run `npm test` to check everything still passes. The same tests and the production build also run automatically on GitHub for every push (see `.github/workflows/ci.yml`).
 
 ## How it is organized
 

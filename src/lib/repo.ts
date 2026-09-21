@@ -125,6 +125,9 @@ export async function listBenches(): Promise<BenchesResponse> {
   }
 
   const dtos = benches.map((b) => buildBenchDto(b, byBench.get(b.id) ?? [], today, settings.expiringSoonDays));
+  // Sort by name with numbers in natural order, so "Bench 2" comes before "Bench 10".
+  const byName = new Intl.Collator('en', { numeric: true, sensitivity: 'base' });
+  dtos.sort((a, b) => byName.compare(a.name, b.name) || byName.compare(a.id, b.id));
   return { benches: dtos, settings, today, sampleCount: dtos.filter((b) => b.isPlaceholder).length };
 }
 
